@@ -1,12 +1,10 @@
-import _ from 'lodash';
+import { createBackground, createHeader } from './website.js';
+import { createHomePage } from './home.js';
+import { createMenuPage } from './menu.js';
+import {createContactPage } from './ contact.js';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', ' webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+createHeader();
+createBackground();
+createHomePage();
+createMenuPage();
+createContactPage();
