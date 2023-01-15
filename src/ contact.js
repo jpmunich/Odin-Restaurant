@@ -2,6 +2,7 @@ export function createContactPage() {
     const contactContainer = document.createElement("div");
     contactContainer.classList.add("tab-container");
     contactContainer.setAttribute("id", "contact-container");
+    contactContainer.classList.add("invisible");
     content.appendChild(contactContainer);
 
     contactContainer.appendChild(createText("Sample Home Page Text"));

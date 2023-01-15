@@ -31,7 +31,9 @@ const createNav = () => {
     const homeTab = document.createElement("button");
     homeTab.innerText = "Home";
     homeTab.classList.add("nav-button");
+    homeTab.classList.add("active-nav-button");
     navContainer.appendChild(homeTab);
+
     homeTab.addEventListener("click", (e) => {
         if (e.target.classList.contains("active-nav-button")) {return;}
         setActiveButton(homeTab, "home-container");
@@ -54,14 +56,14 @@ const createNav = () => {
         if (e.target.classList.contains("active-nav-button")) {return;}
         setActiveButton(contactTab, "contact-container");
     });
-    
+
     return navContainer;
   };
 
 function setActiveButton(button, id) {
     const buttons = document.querySelectorAll(".nav-button");
     const tabContent = document.getElementsByClassName("tab-container");
-
+    
     for (let i = 0; i < tabContent.length; i++) {
         tabContent[i].classList.add("invisible");
     }
